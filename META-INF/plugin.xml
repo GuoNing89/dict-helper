@@ -1,0 +1,48 @@
+<idea-plugin version="2">
+  <id>com.naive.gn.plugin.dict</id>
+  <name>Intellij Idea Dict Helper</name>
+  <version>1.0</version>
+  <vendor email="naive.gn@gmail.com" url="">Naive-GN</vendor>
+
+  <description><![CDATA[
+      Intellij Idea Dict Helper<br>
+      <em>HotKey : Alt + P</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Init.<br>
+      <em>init...</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+      <action id="DictAction" class="com.naive.gn.plugin.dict.action.DictAction" text="Dict Action"
+              description="Dict Action">
+          <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="$Cut"/>
+          <keyboard-shortcut keymap="$default" first-keystroke="alt P"/>
+      </action>
+  </actions>
+
+</idea-plugin>
